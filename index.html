@@ -7,21 +7,24 @@
     <title>Document</title>
     <script src="app.js" defer></script>
     <link rel="stylesheet" href="style.css">
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css'>
 </head>
 <body>
     <header>
-        <input type="text" id="taskInput" placeholder="Ajouter une tâche...">
-        <button id="add-btn">Ajouter</button>
+        <form action="">
+            <input type="text" id="taskInput" name="tpl-todo" placeholder="Ajouter une tâche...">
+            <button id="add-btn">Ajouter</button>
+        </form>
     </header>
     <div class='btn-group'>
         <button id='all'>Toutes</button>
         <button id="todo">A Faire</button>
-        <button id="do">Faite</button>
+        <button id="done">Faite</button>
     </div>
     <ul id="taskList">
-        <li> 1er todo</li>
-        <li> 2er todo</li>
-        <li> 3er todo</li>
     </ul>
 </body>
 </html>
+<template id="tpl">
+    <li class="unchecked" ><input type="checkbox" id="check-icon"><div>template todo</div><button id="boot-icon" class="bi bi-trash-fill"></button> </li>
+</template>

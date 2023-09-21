@@ -4,14 +4,14 @@ body {
     padding: 0;
 }
 
-header {
+form {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 30px;
 }
 
-input[type="text"] {
+#taskInput {
     width: 50%;
     padding: 10px;
     border-radius: 10px;
@@ -29,7 +29,7 @@ input[type="text"] {
 }
 
 #add-btn:hover {
-    background-color: #2989ff;
+    background-color: #0976fa;
 }
 
 .btn-group {
@@ -39,18 +39,13 @@ input[type="text"] {
 }
 
 #all {
-    background-color: white;
+    background-color: #4193f8;
     border: 2px solid #4193f8;
-    color: #4193f8;
+    color: white;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     width: 5rem;
-    height: 5dvh;
-}
-
-#all:hover {
-    background-color: #4193f8;
-    color: white;
+    height: 2rem;
 }
 
 #todo {
@@ -59,15 +54,10 @@ input[type="text"] {
     background-color: white;
     border-left: 0px;
     width: 5rem;
-    height: 5dvh;
+    height: 2rem;
 }
 
-#todo:hover {
-    background-color: #4193f8;
-    color: white;
-}
-
-#do {
+#done {
     background-color: white;
     color: #4193f8;
     border: 2px solid #4193f8;
@@ -75,29 +65,34 @@ input[type="text"] {
     border-top-right-radius: 5px;
     border-left: 0px;
     width: 5rem;
-    height: 5dvh;
+    height: 2rem;
 }
 
-#do:hover {
-    background-color: #4193f8;
-    color: white;
+.fade-in {
+    opacity: 1;
+    transform: translateY(10px);
+    transition: opacity 0.2s ease-in, transform 0.1s ease-in;
 }
 
-li {
-    border: 1px solid #ccc;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.fade-out {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.2s ease-out, transform 0.1s ease-out;
 }
 
 #taskList {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     width: 100%;
-    padding: 20px;
+}
+
+#taskList li{
+    border: 1px solid #ccc;
+    
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    margin-left: 17%;
+    width: 55%;
+    justify-content: space-between;
 }
 
 #taskList li:first-child {
@@ -108,9 +103,30 @@ li {
 #taskList li:last-child {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    border-top: 0px;
 }
 
 #taskList li:not(:first-child):not(:last-child) {
-    border-top: none;
-    border-bottom: none;
+    border-top: 0px;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+#boot-icon {
+    font-size: 1rem;
+    line-height: 1.5;
+    border: 0px;
+    border-radius: 3px;
+    background-color: red;
+    margin-left: 20px;
+    color: white;
+}
+
+#taskList li div {
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    max-width: calc(100% - 40px);
 }
