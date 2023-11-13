@@ -1,0 +1,39 @@
+/* styles/Home.module.css */
+
+.title {
+  /* Title styles */
+  display: flex;
+  justify-content: center;
+  padding-left: 6vw;
+  font-size: 3.5vw;
+  color: #ffedbb;
+  text-shadow: 1px 0px 0px #7a1f7d,
+  0px 1px 0px #7a1f7d,
+  2px 1px 0px #7a1f7d,
+  1px 2px 0px #7a1f7d,
+  3px 2px 0px #7a1f7d,
+  2px 3px 0px #b22739,
+  4px 3px 0px #b22739,
+  3px 4px 0px #ffe017;
+
+  @media (max-width: 768px) {
+    /* Title styles */
+    font-size: 7vw;
+  }
+
+  @media (max-width: 480px) {
+    /* Title styles */
+    font-size: 10vw;
+  }
+}
+
+.nav {
+  color: rgb(79, 22, 234);
+}
+
+.layer {
+  display: flex;
+  justify-content: center;
+  padding-top: 15vh;
+  padding-left: 6vw;
+}

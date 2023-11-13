@@ -1,0 +1,57 @@
+/* styles/Home.module.css */
+
+.wrapper {
+  /* Wrapper styles */
+  display: flex;
+  flex-direction: column;
+  max-width: 70vw;
+  padding-left: 30vw;
+
+}
+
+.title {
+  /* Title styles */
+  font-size: 3.5vw;
+  color: #ffedbb;
+  text-shadow: 1px 0px 0px #7a1f7d,
+  0px 1px 0px #7a1f7d,
+  2px 1px 0px #7a1f7d,
+  1px 2px 0px #7a1f7d,
+  3px 2px 0px #7a1f7d,
+  2px 3px 0px #b22739,
+  4px 3px 0px #b22739,
+  3px 4px 0px #ffe017
+}
+
+.nav {
+  color: rgb(1, 16, 34)
+}
+
+.main {
+  /* Main content styles */
+  display:  flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  top: 15vh;
+}
+
+.pongShowcase {
+  /* Pong game showcase styles */
+  display: flex;
+}
+
+.UserCard {
+  /* User card styles */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  left: 18vw;
+  gap: 20px;
+}
+
+.canvas{
+  /* Canvas styles */
+  background: #000;
+}
+

@@ -1,0 +1,36 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/transcendance/front/front/node_modules
+/transcendance/front/front/.pnp
+/transcendance/front/front/.pnp.js
+/transcendance/front/front/.yarn/install-state.gz
+
+# testing
+/transcendance/front/front/coverage
+
+# next.js
+/transcendance/front/front/.next/
+/transcendance/front/front/out/
+
+# production
+/transcendance/front/front/build
+
+# misc
+/transcendance/front/front/.DS_Store
+/transcendance/front/front/*.pem
+
+# debug
+/transcendance/front/front/npm-debug.log*
+/transcendance/front/front/yarn-debug.log*
+/transcendance/front/front/yarn-error.log*
+
+# local env files
+/transcendance/front/front/.env*.local
+
+# vercel
+/transcendance/front/front/.vercel
+
+# typescript
+/transcendance/front/front/*.tsbuildinfo
+/transcendance/front/front/next-env.d.ts
