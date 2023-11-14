@@ -5,6 +5,8 @@ import { agbalumo } from '../components/font';
 import Background from '../components/background'
 import LoginForm from '../components/LoginForm';
 import ChatRoomList from '../components/ChatRoomList';
+import NavBar from '../components/NavBar';
+import Pong from '../components/Pong';
 
 export default function Home() {
   const userData = {
@@ -44,6 +46,21 @@ export default function Home() {
       id: 3,
       name: 'ChatRoom3',
       description: 'ChatRoom3'
+    },
+    {
+      id: 4,
+      name: 'ChatRoom3',
+      description: 'ChatRoom3'
+    },
+    {
+      id: 5,
+      name: 'ChatRoom3',
+      description: 'ChatRoom3'
+    },
+    {
+      id: 6,
+      name: 'ChatRoom3',
+      description: 'ChatRoom3'
     }
   ];
 
@@ -61,8 +78,31 @@ export default function Home() {
     <Background>
       <h1 className={`${css.title} ${agbalumo.className}`}>Transcendance</h1>
 
-      <div className={`${css.layer}`}>
+      <div className={`${css.loginform}`}>
         <LoginForm onLoginSuccess={handleLoginSuccess} onLoginFailure={handleLoginFailure} />
+      </div>
+
+      <div className={`${css.usercard}`}>
+        <UserCard
+          username={userData.username}
+          avatar={userData.avatar}
+          stats={userData.stats}
+          title={userData.title}
+        />
+        <UserCard
+          username={userData2.username}
+          avatar={userData2.avatar}
+          stats={userData2.stats}
+          title={userData2.title}
+        />
+      </div>
+
+      <div className={`${css.chatroom}`}>
+        <ChatRoomList chatRooms={chatRooms} />
+      </div>
+
+      <div className={`${css.navbar}`}>
+        <NavBar />
       </div>
 
     </Background>

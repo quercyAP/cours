@@ -1,6 +1,5 @@
 import { useState, FormEvent } from 'react';
 import styled from 'styled-components';
-import css from '../styles/LoginForm.module.css';
 
 interface LoginFormProps {
   onLoginSuccess: () => void;
@@ -12,7 +11,12 @@ const StyledFormContainer = styled.div`
   position: absolute;
   padding: 1vh;
   border-radius: 20px;
-  background: rgba(1, 34, 71,0.8);
+  background: rgba(0, 19, 43 ,0.9);
+  box-shadow: 
+    inset 0 2px 5px var(--clr-neon),
+    0 -2px 5px var(--clr-neon),
+    inset 0 -3px 5px 0.5px rgb(0, 217, 224);
+
 
   @media (max-width: 425px) {
     width: 50vw;
@@ -26,11 +30,12 @@ const StyledFormContainer = styled.div`
     right: -2px;
     bottom: -2px;
     box-shadow:
-      0 5px 10px rgb(0, 217, 224),
-      0 5px 10px rgb(0, 217, 224),
-      0px 0 30px rgb(240, 7, 129);
+      0 2px 5px rgb(0, 217, 224),
+      0 2px 5px rgb(0, 217, 224),
+      0px 0 30px rgb(255, 20, 189);
     background: linear-gradient(150deg,
-      rgba(255, 30, 146, 0.7) 0%, 
+      rgba(255, 20, 189, 0.7) 0%,
+      rgba(255, 20, 189, 1) 30%, 
       rgba(255, 255, 255, 0.8) 70%,
       rgba(162, 224, 226, 1) 75%);
     border-radius: 20px;
@@ -46,7 +51,9 @@ const StyledForm = styled.form`
   padding-right: 1vw;
   padding-bottom: 10px;
   min-height: 25vh;
+  position: relative;
   width: 15vw;
+  z-index: 0;
   flex-direction: column;
 
   @media (max-width: 768px) {
@@ -55,25 +62,6 @@ const StyledForm = styled.form`
 
   @media (max-width: 1024px) {
     width: 25vw;
-  }
-
-  &:before {
-    content: '';
-    position: absolute;
-    top: -1px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    box-shadow:
-      0 5px 10px rgba(0, 217, 224, 0.1),
-      0 5px 10px rgba(0, 217, 224, 0.1),
-      0px 0 30px rgba(240, 7, 129, 0.1);
-    background: linear-gradient(150deg,
-      rgba(255, 30, 146, 0.7) 0%, 
-      rgba(255, 255, 255, 0.8) 70%,
-      rgba(162, 224, 226, 1) 75%);
-    border-radius: 20px;
-    z-index: -1;
   }
 `;
 
@@ -104,16 +92,36 @@ const StyledLabel = styled.label`
 
 // Style pour les boutons avec l'effet de gradient
 const StyledButton = styled.button`
-  background: rgba(105, 250, 255, 0.7);
-  color: #ffeab5;
-  border: none;
-  padding: 1vh;
-  margin-top: 3vh;
   cursor: pointer;
-  border-radius: 5px;
+  color: #ffeab5;
+  font-size: 1em;
+  margin-top: 3vh;
+  border: var(--clr-neon) 2px solid;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: inset 0 0 10px 0 var(--clr-neon), 0 0 10px 0 var(--clr-neon);
+  position: relative;
 
-  @media (max-width: 425px) {
-    width: 44vw;
+  &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      border-radius: 5px;
+      box-shadow: 0 0 2em 0.5em var(--clr-neon);
+      opacity: 0;
+      background-color: var(--clr-neon);
+      z-index: -1;
+      transition: opacity 100ms linear;
+  }
+  &:hover {
+      color: var(--clr-bg);
+      text-shadow: none;
+  }
+  &:hover:after {
+      opacity: 1;
   }
 
 `;
